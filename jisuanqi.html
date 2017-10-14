@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+
+	<style type="text/css">
+	#reslut{text-align: right;}
+</style>
+</head>
+<body>
+	<table align="center"  border="1px">
+		<tr>
+			<td colspan="3" id="reslut">0</td>
+		    <td><button value="C">C</button></td>
+		</tr>
+		<tr>
+			<td><button value="1">1</button></td>
+		    <td><button value="2">2</button></td>
+		    <td><button value="3">3</button></td>
+		    <td><button value="+">+</button></td>
+		</tr>
+		<tr>
+			<td><button value="4">4</button></td>
+		    <td><button value="5">5</button></td>
+		    <td><button value="6">6</button></td>
+		    <td><button value="-">-</button></td>
+		</tr>
+		<tr>
+			<td><button value="7">7</button></td>
+		    <td><button value="8">8</button></td>
+		    <td><button value="9">9</button></td>
+		    <td><button value="*">*</button></td>
+		</tr>
+		<tr>
+			<td><button value="0">0</button></td>
+		    <td><button value=".">.</button></td>
+		    <td><button value="=">=</button></td>
+		    <td><button value="/">/</button></td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var btns=document.getElementsByTagName('button');
+		for(var i=0;i<btns.length;i++){
+			btns[i].onclick=function(){
+				var str=this.value; 
+				switch(str){
+					case"=":
+					calculate();
+					break;
+					case"C":
+					document.getElementById('reslut').innerHTML="0";
+					break;
+					default:
+					var reslut=document.getElementById('reslut');
+				if(reslut.innerHTML==0){
+					reslut.innerHTML="";
+				}
+                   reslut.innerHTML+=str;
+                   break;
+				}
+				
+					
+			}
+		}
+		function calculate(){
+			var str1=document.getElementById('reslut').innerHTML;
+			var reslut=eval(str1);
+			document.getElementById('reslut').innerHTML=reslut;
+		}
+	}
+</script>
+</html>
