@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>期末复习
+</title>
+<style type="text/css">
+.nav{background-color: #ffaa00;height: 30px;width: 100%;text-align: center; }
+.nav1{float:left;color: white}
+.nava{color: white;}
+#nav2 li ul{
+		display:none;
+		}
+#nav2 li.subMenuShow ul{
+		display:block;
+		}
+a:hover{color: yellow;}
+li{list-style-type: none;margin-right: 50px;padding-top:3px;padding-left: 10px;  }
+a{text-decoration: none;}
+#banner{background-image: url(images/banner.png); width: 100%;float: left;height: 100px;}
+form{position: absolute;top: 15px;right: 15px;}
+#content{padding-left: 96px;}
+#content-bottom{clear: both;padding-left:96px;}
+#content-bottom1{padding-left: 20px;float: left;}
+#content-bottom2{float: left;}
+#content-left{float: left;width: 270px;height: 260px;overflow:hidden;}
+#content-center{float: left;padding-left: 30px;}
+#list-st{padding-top: 20px;}
+#bottom{clear: both;}
+.bottom1{display: inline;}
+.bottom2{width: 100%;text-align: center;}
+</style>
+<script type="text/javascript">
+		window.onload = function(){//隐藏下拉菜单
+			var liNodes = document.getElementsByTagName("li");
+			for (var i=0; i<liNodes.length; i++)
+			{
+				liNodes[i].onmouseover = function(){
+					this.className = "subMenuShow";
+				}
+				liNodes[i].onmouseout = function(){
+					this.className = "";
+				}
+			}
+		}
+		function tell1(){alert("这是一张花粉图")}//显示图片信息
+		function tell2(){alert("这是一张蜂蜜图")}
+		function tell3(){alert("这是一张蜂蜡图")}
+		function tell4(){alert("这是一张蜂巢图")}
+		window.onload=function(){//图片滚动
+	contentleft = document.getElementById("content-left");
+	contentleft1 = document.getElementById("content-left1");
+	contentleft2= document.getElementById("content-left2");
+
+	contentleft2.innerHTML = contentleft1.innerHTML;
+
+	var ID=setInterval(changeToLeft,10);
+	contentleft.onmouseover=function() {
+		clearInterval(ID);
+	}
+	contentleft.onmouseout=function() {
+		ID=setInterval(changeToLeft,10);
+	}
+
+
+};
+function changeToLeft(){
+	
+	if(contentleft.scrollLeft >= (contentleft1.offsetWidth)){
+		contentleft.scrollLeft = 0;
+	}
+	else{
+		contentleft.scrollLeft += 1;
+	}
+}
+	</script>
+</head>
+<body>
+<div>
+	<div class="nav"><ul id="nav2">
+	<li class="nav1"><a href="first.html" class="nava">首页</a>
+<ul><li><a href="#">图片</a></li>
+	<li><a href="#">视频</a></li>
+	<li><a href="#">新闻中心</a></li>
+    <li><a href="#">养殖交流</a></li>
+	<li><a href="#">养殖基地</a></li>
+	<li><a href="#">蜜源</a></li>
+	<li><a href="#">天气</a></li>
+	<li><a href="#">销售</a></li>
+</ul>
+	</li>
+	<li class="nav1"><a href="#" class="nava">图片</a>
+<ul>
+	<li><a href="#">蜜蜂</a></li>
+	<li><a href="#">蜂蜜</a></li>
+	<li><a href="#">花粉</a></li>
+</ul>
+	</li>
+	<li class="nav1"><a href="#" class="nava">视频</a>
+<ul>
+	<li><a href="#">蜜蜂采蜜</a></li>
+	<li><a href="#">蜜粉采粉</a></li>
+	<li><a href="#">蜜蜂生活</a></li>
+</ul>
+	</li>
+	<li class="nav1"><a href="second.html" class="nava">新闻中心</a>
+<ul>
+	<li><a href="#">最近新闻</a></li>
+	<li><a href="#">重大新闻</a></li>
+	<li><a href="#">花边新闻</a></li>
+</ul>
+	</li>
+    <li class="nav1"><a href="Thr.html" class="nava">养殖交流</a>
+<ul>
+	<li><a href="#">学术交流</a></li>
+	<li><a href="#">养殖交流</a></li>
+</ul>
+    </li>
+    <li class="nav1"><a href="#" class="nava">养殖基地</a>
+    </li>
+    <li class="nav1"><a href="#" class="nava">蜜源</a>
+<ul>
+	<li><a href="#">地方</a></li>
+	<li><a href="#">全国</a></li>
+	<li><a href="#">世界</a></li>
+</ul>
+    </li>
+    <li class="nav1"><a href="#" class="nava">天气</a>
+<ul>
+	<li><a href="#">当天天气</a></li>
+	<li><a href="#">一个礼拜天气</a></li>
+</ul>
+    </li>
+    <li class="nav1"><a href="#" class="nava">销售</a>
+    </li></ul>
+    <form>
+		搜索<input type="text" name="search">
+	</form>
+	</div>
+	<div id="banner"><img src="images/logo.jpg" height="100px">
+	</div>
+</div>
+<div id="content">
+	<div id="content-left">
+    <span id="content-left1">
+		<img src="images/1.jpg">
+		<img src="images/2.jpg">
+	</span>
+	<span id="content-left2"></span>
+	</div>
+	<div id="content-center"><img src="images/pxdt.png" >
+	<br/>
+<li id="list-st"><a href="#">各养殖地所在地天气情况</a></li>
+<li id="list-st"><a href="#">养蜂人交流</a></li>
+<li id="list-st"><a href="#">蜂产品交易</a></li>
+<li id="list-st"><a href="#">学术交流</a></li>
+	</div>
+<div id="content-bottom2"><img src="images/2.png" height="255px"></div>
+	<div id="content-center"><img src="images/academic.png" width="200px">
+	<br/>
+<li id="list-st"><a href="#">蜂繁殖情况</a></li>
+<li id="list-st"><a href="#">病虫害情况</a></li>
+<li id="list-st"><a href="#">新工具的开发使用</a></li>
+<li id="list-st"><a href="#">养殖技术</a></li>
+	</div>
+</div>
+<div id="content-bottom">
+    <div id="content-bottom2" onmouseover="tell1()"><img src="images/3.jpg" height="238px"></div>
+    <div id="content-bottom1" onmouseover="tell2()"><img src="images/4.jpg"></div>
+    <div id="content-bottom1" onmouseover="tell3()"><img src="images/5.jpg"></div>
+    <div id="content-bottom1" onmouseover="tell4()"><img src="images/6.jpg"></div>
+</div>
+<div id="bottom"><div  class="bottom2">
+            <li class="bottom1"><a href="#">电子信箱</a></li>
+			<li class="bottom1"><a href="#">设为首页</a></li>
+			<li class="bottom1"><a href="#">在线调查</a></li>
+			<li class="bottom1"><a href="#">加入收藏</a></li>
+			<li class="bottom1"><a href="#">网站地图</a></li>
+			<li class="bottom1"><a href="#">关于我们</a></li>
+		</div>
+		<div class="bottom2"><img src="images/line.jpg">
+	</div><div class="bottom2">copyright©2013-2014 Hebshufajia.com,ALL Rights Reserved</div>
+	<div class="bottom2">冀ICP备05067795 冀公网安备110402440008号</div></div>	
+</body>
+</html>
